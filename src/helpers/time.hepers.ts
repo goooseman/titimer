@@ -25,7 +25,7 @@ const getNumberBeforeString = (
   return parseInt(match[0]);
 };
 
-export const parseStringToSeconds = (timeString: string): number => {
+export const parseStringToMs = (timeString: string): number => {
   let seconds = 0;
   for (const [key, entry] of Object.entries(timeUnits)) {
     const count = getNumberBeforeString(timeString, key);
@@ -36,3 +36,5 @@ export const parseStringToSeconds = (timeString: string): number => {
   }
   return seconds;
 };
+
+export const parseMsToString = (ms: number) => `${ms / 1000} seconds`;
