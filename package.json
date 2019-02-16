@@ -2,7 +2,7 @@
   "name": "trucknet-boilerplate-typescript-node",
   "version": "0.0.1",
   "description": "Boilerplate for node project on typescript",
-  "main": "src/main.js",
+  "bin": "src/main.js",
   "engines": {
     "node": "~10.14.0",
     "npm": "~6.4.0"
