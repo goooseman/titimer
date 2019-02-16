@@ -19,12 +19,12 @@ Can parse a string in a format `1h20m30s`. Extra blocks (hours and minutes) can 
 
 ## Usage
 
-`titimer 1h20m30s` - runs a timer for 1 hour, 20 minutes, 30 seconds
-`titimer 20m30s` - runs a timer for 20 minutes, 30 seconds
-`titimer 30s` - runs a timer for 30 seconds
+- `titimer 1h20m30s` - runs a timer for 1 hour, 20 minutes, 30 seconds
+- `titimer 20m30s` - runs a timer for 20 minutes, 30 seconds
+- `titimer 30s` - runs a timer for 30 seconds
 
-`titimer -v` - prints version
-`titimer -h` - prints help
+- `titimer -v` - prints version
+- `titimer -h` - prints help
 
 ## TODO
 
