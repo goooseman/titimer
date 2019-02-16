@@ -23,6 +23,9 @@ Can parse a string in a format `1h20m30s`. Extra blocks (hours and minutes) can 
 `titimer 20m30s` - runs a timer for 20 minutes, 30 seconds
 `titimer 30s` - runs a timer for 30 seconds
 
+`titimer -v` - prints version
+`titimer -h` - prints help
+
 ## TODO
 
 - [ ] Make a pluralization for seconds output (now the output is `1 seconds`)
@@ -32,9 +35,9 @@ Can parse a string in a format `1h20m30s`. Extra blocks (hours and minutes) can 
 
 ## Preview generation
 
-`cd ..`
-`asciinema rec titimer/extra/preview.cast`
-`titimer 3s`
-`CTRL+d`
-`cd -`
-`npx asciicast2gif -s 2 extra/preview.cast extra/preview.svg`
+- `cd ..`
+- `asciinema rec titimer/extra/preview.cast`
+- `titimer 3s`
+- `CTRL+d`
+- `cd -`
+- `npx asciicast2gif -s 2 extra/preview.cast extra/preview.svg`
