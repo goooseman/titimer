@@ -1,27 +1,25 @@
-# Trucknet Boilerplate for nodejs project on Typescript
+# TiTimer
 
-> A sample node project on typescript with tslint (and trucknet tslint config), prettier, lint-staged, commitizen, jest, ts-jest, jest-coverage-badges preinstalled and preconfigured.
+> `tiː ˈtaɪ.mər` short of TinyTimer and also refers to TeaTimer
 
-## Getting started
+A very simple CLI utility to run a timer for a specific period of time.
 
-1. `git clone` this repository
-2. `rm -rf .git`
-3. `git init`
-4. `git remote add origin`
-5. `git flow init`
-6. Edit package.json to change name, description and git repository
+Written with 0 code dependencies (but uses [module-alias](https://www.npmjs.com/package/module-alias) just for import aliases)
 
-## Start
+Can parse a string in a format `1h20m30s`. Extra blocks (hours and minutes) can be skipped, e.g. `30s`.
 
-`npm run build` to build js, `npm start` to start
+## Installation
 
-## Tests
+`npm i -g titimer`
 
-`npm test` to launch all tests.
+## Usage
 
-Unit tests should be near the file with `.spec.ts` extention.
-Integration tests should be in **tests**
+`titimer 1h20m30s` - runs a timer for 1 hour, 20 minutes, 30 seconds
+`titimer 20m30s` - runs a timer for 20 minutes, 30 seconds
+`titimer 30s` - runs a timer for 30 seconds
 
-## Release
+## TODO
 
-`npm test patch/minor/major` will start a release/ branch (using git flow), edit package.json (and lock) to update the version, commit, finish the release and push including all branches and tags
+- [ ] Make a pluralization for seconds output (now the output is `1 seconds`)
+- [ ] Make an output string to output timer in `n hours n minutes n seconds` format (now the ouptut is `3600 seconds`)
+- [ ] Show a system notification when timer is finished, with an opt-out parameter
