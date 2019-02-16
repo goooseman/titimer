@@ -1,5 +1,8 @@
 # TiTimer
 
+[![Build Status](https://travis-ci.org/goooseman/titimer.svg?branch=master)](https://travis-ci.org/goooseman/titimer)
+[![Coverage Status](https://coveralls.io/repos/github/goooseman/titimer/badge.svg?branch=master)](https://coveralls.io/github/goooseman/titimer?branch=master)
+
 > `tiː ˈtaɪ.mər` short of TinyTimer and also refers to TeaTimer
 
 [![asciicast](https://asciinema.org/a/z32GvPxDvuQ0WxDawcib3HBtC.svg)](https://asciinema.org/a/z32GvPxDvuQ0WxDawcib3HBtC)
