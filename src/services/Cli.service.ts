@@ -1,3 +1,4 @@
+import { TIME_FORMAT_EXAMPLE } from "@src/constants/cli.constants";
 import { EventEmitter } from "events";
 // tslint:disable-next-line no-relative-imports
 import * as packageJson from "../../package.json";
@@ -43,7 +44,7 @@ class CliService extends EventEmitter {
   };
 
   private printHelp = () => {
-    const text = `Usage: titimer 1h2m30s`;
+    const text = `Usage: titimer ${TIME_FORMAT_EXAMPLE}`;
     this.emit("print", text);
   };
 }

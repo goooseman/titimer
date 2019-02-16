@@ -1,6 +1,9 @@
-import { CLEAR_LINE, MOVE_LEFT } from "@src/constants/cli.constants";
+import {
+  CLEAR_LINE,
+  MOVE_LEFT,
+  TIME_FORMAT_EXAMPLE,
+} from "@src/constants/cli.constants";
 import run from "@src/run";
-import { ZeroTimerError } from "@src/services/Timer.service";
 
 // tslint:disable-next-line no-relative-imports
 import { version } from "../package.json";
@@ -42,9 +45,9 @@ const createStdoutSpy = () => {
   return spy;
 };
 
-const createConsoleSpy = () => {
+const createConsoleSpy = (level: "log" | "error") => {
   const spy = jest.fn();
-  jest.spyOn(console, "log").mockImplementation(spy);
+  jest.spyOn(console, level).mockImplementation(spy);
   return spy;
 };
 
@@ -77,19 +80,21 @@ test("Should run for 1 minute 5 seconds when 1m3s passed", () => {
 });
 
 test("Should should show version if -v is passed", () => {
-  const consoleSpy = createConsoleSpy();
+  const consoleSpy = createConsoleSpy("log");
   run(["-v"]);
   expect(consoleSpy).toHaveBeenLastCalledWith(`Version ${version}`);
 });
 
 test("Should should show help if nothing is passed", () => {
-  const consoleSpy = createConsoleSpy();
+  const consoleSpy = createConsoleSpy("log");
   run([]);
   expect(consoleSpy).toHaveBeenLastCalledWith(expect.stringMatching(/Usage/));
 });
 
 test("Should fail on illegal string", () => {
-  expect(() => {
-    run(["fdfddfd"]);
-  }).toThrowError(ZeroTimerError);
+  const consoleSpy = createConsoleSpy("error");
+  run(["foo"]);
+  expect(consoleSpy).toHaveBeenLastCalledWith(
+    `Please, provide a string in a format ${TIME_FORMAT_EXAMPLE}`,
+  );
 });
