@@ -43,6 +43,7 @@
   "homepage": "https://github.com/trucknet-io/trucknet-boilerplate-typescript-node#readme",
   "devDependencies": {
     "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.26",
     "concurrently": "^4.1.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.10",
@@ -51,14 +52,13 @@
     "trucknet-commit": "^1.4.3",
     "ts-jest": "^23.10.3",
     "tslint": "^5.12.1",
-    "tslint-config-trucknet-io": "^1.4.0"
+    "tslint-config-trucknet-io": "^1.4.0",
+    "typescript": "^3.3.3"
   },
   "_moduleAliases": {
     "@src": "src"
   },
   "dependencies": {
-    "@types/node": "^10.12.21",
-    "module-alias": "^2.1.0",
-    "typescript": "^3.3.1"
+    "module-alias": "^2.1.0"
   }
 }
