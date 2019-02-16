@@ -45,6 +45,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.26",
+    "asciicast2gif": "^0.2.1",
     "concurrently": "^4.1.0",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0",

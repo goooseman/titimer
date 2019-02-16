@@ -5,7 +5,7 @@
 
 > `tiː ˈtaɪ.mər` short of TinyTimer and also refers to TeaTimer
 
-[![asciicast](https://asciinema.org/a/z32GvPxDvuQ0WxDawcib3HBtC.svg)](https://asciinema.org/a/z32GvPxDvuQ0WxDawcib3HBtC)
+![asciicast](./extra/preview.gif)
 
 A very simple CLI utility to run a timer for a specific period of time.
 
@@ -29,3 +29,12 @@ Can parse a string in a format `1h20m30s`. Extra blocks (hours and minutes) can 
 - [ ] Make an output string to output timer in `n hours n minutes n seconds` format (now the ouptut is `3600 seconds`)
 - [ ] Show a system notification when timer is finished, with an opt-out parameter
 - [ ] Package to single executable and provide a cask for homebrew
+
+## Preview generation
+
+`cd ..`
+`asciinema rec titimer/extra/preview.cast`
+`titimer 3s`
+`CTRL+d`
+`cd -`
+`npx asciicast2gif -s 2 extra/preview.cast extra/preview.svg`
