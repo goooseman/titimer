@@ -2,6 +2,8 @@
 
 > `tiː ˈtaɪ.mər` short of TinyTimer and also refers to TeaTimer
 
+[![asciicast](https://asciinema.org/a/z32GvPxDvuQ0WxDawcib3HBtC.svg)](https://asciinema.org/a/z32GvPxDvuQ0WxDawcib3HBtC)
+
 A very simple CLI utility to run a timer for a specific period of time.
 
 Written with 0 code dependencies (but uses [module-alias](https://www.npmjs.com/package/module-alias) just for import aliases)

@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trucknet-io/trucknet-boilerplate-typescript-node.git"
+    "url": "git+git@github.com:goooseman/titimer.git"
   },
   "keywords": [
     "titimer",
@@ -39,9 +39,9 @@
   "author": "goooseman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trucknet-io/trucknet-boilerplate-typescript-node/issues"
+    "url": "https://github.com/goooseman/titimer/issues"
   },
-  "homepage": "https://github.com/trucknet-io/trucknet-boilerplate-typescript-node#readme",
+  "homepage": "https://github.com/goooseman/titimer",
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.26",
