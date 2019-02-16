@@ -24,7 +24,8 @@
     "test:e2e": "jest --detectOpenHandles --testPathPattern \"__tests__/.+.tsx?\"",
     "test:ci": "jest --detectOpenHandles --coverage && cat ./coverage/lcov.info | coveralls",
     "clean": "rimraf '{src,__tests__}/**/*.js?(x)?(.map)'",
-    "release": "./extra/deployment/release.sh"
+    "release": "./extra/deployment/release.sh",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
