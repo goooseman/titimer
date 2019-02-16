@@ -1,6 +1,6 @@
 {
   "name": "titimer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tinytimer with a countdown",
   "bin": "bin/cli.js",
   "engines": {
