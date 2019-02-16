@@ -1,11 +1,16 @@
 import { EventEmitter } from "events";
 
+export class ZeroTimerError extends Error {}
+
 class Timer extends EventEmitter {
   public msLeft: number;
   private interval: NodeJS.Timer;
 
   constructor(ms: number) {
     super();
+    if (ms <= 0) {
+      throw new ZeroTimerError();
+    }
     this.msLeft = ms;
     this.interval = setInterval(this.updateCounter, 1000);
   }

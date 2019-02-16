@@ -1,5 +1,7 @@
 import { CLEAR_LINE, MOVE_LEFT } from "@src/constants/cli.constants";
 import run from "@src/run";
+import { ZeroTimerError } from "@src/services/Timer.service";
+
 // tslint:disable-next-line no-relative-imports
 import { version } from "../package.json";
 
@@ -84,4 +86,10 @@ test("Should should show help if nothing is passed", () => {
   const consoleSpy = createConsoleSpy();
   run([]);
   expect(consoleSpy).toHaveBeenLastCalledWith(expect.stringMatching(/Usage/));
+});
+
+test("Should fail on illegal string", () => {
+  expect(() => {
+    run(["fdfddfd"]);
+  }).toThrowError(ZeroTimerError);
 });

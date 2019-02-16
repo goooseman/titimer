@@ -8,7 +8,7 @@ const timeUnits: {
   h: 60 * 60 * 1000,
 };
 
-export class MultipleTimeBlocks extends Error {}
+export class MultipleTimeBlocksError extends Error {}
 
 const getNumberBeforeString = (
   originalString: string,
@@ -20,7 +20,7 @@ const getNumberBeforeString = (
     return undefined;
   }
   if (match.length > 1) {
-    throw new MultipleTimeBlocks();
+    throw new MultipleTimeBlocksError();
   }
   return parseInt(match[0]);
 };

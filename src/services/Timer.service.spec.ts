@@ -1,4 +1,4 @@
-import TimerService from "./Timer.service";
+import TimerService, { ZeroTimerError } from "./Timer.service";
 
 jest.useFakeTimers();
 
@@ -27,6 +27,10 @@ it("should fire a finish event after timer runout", () => {
   jest.advanceTimersByTime(500);
   expect(finishSpy).toHaveBeenCalledTimes(1);
   expect(finishSpy).toHaveBeenLastCalledWith();
+});
+
+it("should should throw on 0ms timeout with ZeroTimerError", () => {
+  expect(() => new TimerService(0)).toThrowError(ZeroTimerError);
 });
 
 afterAll(() => {

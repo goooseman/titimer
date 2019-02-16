@@ -1,5 +1,5 @@
 import {
-  MultipleTimeBlocks,
+  MultipleTimeBlocksError,
   parseMsToString,
   parseStringToMs,
 } from "./time.hepers";
@@ -29,8 +29,10 @@ describe("parseStringToMs", () => {
     );
   });
 
-  it("should not parse 1h12m1h and fail with MultipleTimeBlocks exception", () => {
-    expect(() => parseStringToMs("1h12m1h")).toThrowError(MultipleTimeBlocks);
+  it("should not parse 1h12m1h and fail with MultipleTimeBlocksError exception", () => {
+    expect(() => parseStringToMs("1h12m1h")).toThrowError(
+      MultipleTimeBlocksError,
+    );
   });
 
   // it.todo("should not parse foo");
