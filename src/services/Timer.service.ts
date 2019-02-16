@@ -8,6 +8,9 @@ class Timer extends EventEmitter {
     super();
     this.msLeft = ms;
     this.interval = setInterval(this.updateCounter, 1000);
+  }
+
+  public start() {
     this.updateCounter();
   }
 
