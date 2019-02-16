@@ -46,6 +46,7 @@
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.26",
     "concurrently": "^4.1.0",
+    "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "nodemon": "^1.18.10",
     "prettier-config-trucknet-io": "^2.0.1",
