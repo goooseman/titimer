@@ -4,13 +4,18 @@ import * as packageJson from "../../package.json";
 
 class CliService extends EventEmitter {
   public argumentList: string[];
+  public onStarted: (argumentList: string[]) => void;
 
-  constructor(argumentList: string[]) {
+  constructor(
+    argumentList: string[],
+    onStarted: (argumentList: string[]) => void,
+  ) {
     super();
     this.argumentList = argumentList;
+    this.onStarted = onStarted;
   }
 
-  public open() {
+  public close() {
     this.parseCommand();
   }
 
@@ -30,6 +35,7 @@ class CliService extends EventEmitter {
       commands[firstArgument]();
       return;
     }
+    this.onStarted(this.argumentList);
   }
 
   private printVersion = () => {
