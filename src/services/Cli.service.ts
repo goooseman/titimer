@@ -15,7 +15,7 @@ class CliService extends EventEmitter {
     this.onStarted = onStarted;
   }
 
-  public close() {
+  public start() {
     this.parseCommand();
   }
 

@@ -32,6 +32,8 @@ describe("parseStringToMs", () => {
   it("should not parse 1h12m1h and fail with MultipleTimeBlocks exception", () => {
     expect(() => parseStringToMs("1h12m1h")).toThrowError(MultipleTimeBlocks);
   });
+
+  // it.todo("should not parse foo");
 });
 
 describe("parseMsToString", () => {

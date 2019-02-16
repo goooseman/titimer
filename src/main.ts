@@ -1,7 +1,6 @@
 // tslint:disable-next-line
 import "module-alias/register";
 
-import { message } from "@src/a";
+import run from "@src/run";
 
-// tslint:disable-next-line
-console.log(message());
+run(process.argv.slice(2));
