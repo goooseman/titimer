@@ -1,8 +1,8 @@
 {
-  "name": "trucknet-boilerplate-typescript-node",
+  "name": "titimer",
   "version": "0.0.1",
-  "description": "Boilerplate for node project on typescript",
-  "bin": "src/main.js",
+  "description": "A tinytimer with a countdown",
+  "bin": "bin/cli.js",
   "engines": {
     "node": "~10.14.0",
     "npm": "~6.4.0"
@@ -25,16 +25,16 @@
     "test:ci": "jest --detectOpenHandles --coverage && cat ./coverage/lcov.info | coveralls",
     "clean": "rimraf '{src,__tests__}/**/*.js?(x)?(.map)'",
     "release": "./extra/deployment/release.sh",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build:clean"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trucknet-io/trucknet-boilerplate-typescript-node.git"
   },
   "keywords": [
-    "trucknet",
-    "typescript",
-    "boilerplate"
+    "titimer",
+    "timer",
+    "typescript"
   ],
   "author": "goooseman",
   "license": "MIT",

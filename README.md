@@ -23,3 +23,4 @@ Can parse a string in a format `1h20m30s`. Extra blocks (hours and minutes) can 
 - [ ] Make a pluralization for seconds output (now the output is `1 seconds`)
 - [ ] Make an output string to output timer in `n hours n minutes n seconds` format (now the ouptut is `3600 seconds`)
 - [ ] Show a system notification when timer is finished, with an opt-out parameter
+- [ ] Package to single executable and provide a cask for homebrew
