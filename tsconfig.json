@@ -2,6 +2,7 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "sourceMap": true,
